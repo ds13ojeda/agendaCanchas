@@ -26,7 +26,7 @@ app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el f
 app.use('/', mainRouter);
 
 app.listen(process.env.PORT || 3000, function() {
-	console.log('Servidor corriendo en el puerto 3000');
+	console.log('Servidor corriendo en el puerto', PORT);
 })
 
 // catch 404 and forward to error handler
