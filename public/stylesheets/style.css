@@ -134,6 +134,7 @@ label {
 
 select {
   font-family: var(--principalFont);
+  color: var(--black);
   font-size: 5rem;
   width: 20rem;
   height: 10rem;  
@@ -158,6 +159,10 @@ input {
   margin-left: 3rem;
 }
 
+.time_select {
+  width: 20rem;
+}
+
 .checkbox {
   height: 6rem;
   width: 10rem;
@@ -168,7 +173,12 @@ input {
 }
 
 .court_select {
-  width: 10rem;
+  width: 15rem;
+}
+
+button .add {
+  color: var(--black);
+  width: 90%;
 }
 
 button {

@@ -10,7 +10,7 @@
                     <div class="container">
                         <div class="form">
                             <label for="time">Hora </label>
-                            <select name="time" id="time">
+                            <select class="time_select" name="time" id="time">
                             <% for (let i = 0; i < tuesdayFree.length; i++) { %>
                                 <option value="<%= tuesdayFree[i].time %>"><%= tuesdayFree[i].time %></option>
                             <% } %>
@@ -18,7 +18,12 @@
                         </div>
                         <div class="form">
                             <label for="fixed">Fijo  </label>
-                            <input class="checkbox" type="checkbox" name="fixed">  
+                            <input class="checkbox" type="checkbox" name="fixed"> 
+                            <label class="court" for="court">Cancha:</label>
+                            <select class="court_select center" name="court">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>  
                         </div>
                         <div class="form">
                             <label for="name">Responsable: </label>
@@ -29,7 +34,7 @@
                             <input type="tel" name="tel">
                         </div>
                         <div class="center">
-                            <button tipe="submit">Agregar horario</button>
+                            <button class="add" tipe="submit">Agregar horario</button>
                         </div>
                     </div>
                 </form>
