@@ -1,2 +1,2 @@
-web: node ./bin/www
+web: node ./bin/www npm start
 web: ./src/app.js
