@@ -25,7 +25,9 @@ app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el f
 
 app.use('/', mainRouter);
 
-app.listen(process.env.PORT || 3000, function() {
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, function() {
 	console.log('Servidor corriendo en el puerto', PORT);
 })
 
