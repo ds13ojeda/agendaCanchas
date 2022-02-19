@@ -22,7 +22,7 @@ const wednesdayController = {
             timeToReserve[0].name = req.body.name
             timeToReserve[0].tel = req.body.tel
             if (req.body.fixed) {
-                a[0].fixed = 1
+                timeToReserve[0].fixed = 1
             } 
         }
 
