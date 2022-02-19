@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+    <body>
+        <%- include('partials/header') %>
+        <main>
+            <h1 class="center">Jueves</h1>
+            <div>
+                <form action="/thursday?_method=PUT" method="POST">
+                    <div class="container">
+                        <div class="form">
+                            <label for="time">Hora </label>
+                            <select name="time" id="time">
+                            <% for (let i = 0; i < thursdayFree.length; i++) { %>
+                                <option value="<%= thursdayFree[i].time %>"><%= thursdayFree[i].time %></option>
+                            <% } %>
+                            </select>
+                        </div>
+                        <div class="form">
+                            <label for="fixed">Fijo  </label>
+                            <input class="checkbox" type="checkbox" name="fixed">  
+                        </div>
+                        <div class="form">
+                            <label for="name">Responsable: </label>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="form">
+                            <label for="tel">Teléfono: </label>
+                            <input type="tel" name="tel">
+                        </div>
+                        <div class="center">
+                            <button tipe="submit">Agregar horario</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <section>
+                <% for(let i = 0; i < thursdayReserved.length; i++) { %>
+                    <div class="reserved center">
+                        <div class="hour">
+                            <h3>Hora: <%= thursdayReserved[i].time %></h3>  
+                        </div>
+                        
+                        <div>
+                            <p class="name"><%= thursdayReserved[i].name %></p>
+                            <p class="tel"><%= thursdayReserved[i].tel %></p>
+                            <% if(thursdayReserved[i].fixed == 1) { %>
+                                <p class="fixed">Horario fijo</p>
+                                <form class="formFixed center" action="/thursday/delete/<%= thursdayReserved[i].id %>?_method=PUT" method="POST">
+                                    <button type="submit" class="fixedButton">Borrar</button>
+                                </form>
+                            <% } %>
+                        </div>
+
+                        
+                    </div>
+                <% } %>
+            </section>
+            <form action="/thursday/reset?_method=PUT" method="post">
+                <div class="center">
+                    <button id="reset">Reiniciar</button>
+                </div>
+                
+            </form>
+        </main>
+    </body>
+<script src="/javascripts/menu.js"></script>
+</html>

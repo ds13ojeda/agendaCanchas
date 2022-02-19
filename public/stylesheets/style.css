@@ -1,0 +1,227 @@
+:root {
+  --green: #3DBB0D;
+  --darkGreen: #2A8109;
+  --grey: #242539;
+  --black: #000;
+  --white: #FFF;
+
+  --principalFont: 'Lato', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Esto es para que 1rem = 10px */
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+body{
+  background-color: var(--grey);
+  font-size: 1.6rem;
+  line-height: 1.5; /* Base de la Fuente */ /*Interlineado*/
+}
+
+main {
+  padding: 0 3rem;
+}
+
+p{
+  font-size: 1.8rem;
+  font-family: var(--principalFont);
+  color: var(--white);
+}
+
+a{
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h1, h2, h3 {
+  text-align: center;
+  color: var(--white);
+  font-family: var(--principalFont);
+}
+h1 {
+  font-family: var(--principalFont);
+  font-size: 10rem;
+  margin: -3rem 0 2rem 0;
+}
+h2{
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+.center {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+
+
+/* Header */
+
+header {
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50rem;
+  gap: 10rem;
+}
+
+.logo__img {
+  width: 20rem;
+}
+
+.menu__burger {
+  width: 12rem;
+}
+
+/* Menú desplegable */
+
+.days {
+  background-color: var(--green);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-family: var(--principalFont);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: var(--darkGreen);
+  padding: 3rem 0;
+}
+
+/* Main */
+
+h2 {
+  font-size: 7rem;
+}
+
+h3 {
+  font-size: 5rem;
+}
+
+/* Main */
+
+main {
+  padding-top: 5rem;
+}
+
+/* Form */
+
+label {
+  font-size: 8rem;
+  font-family: var(--principalFont);
+  color: var(--white);
+}
+
+select {
+  font-family: var(--principalFont);
+  font-size: 5rem;
+  width: 20rem;
+  height: 10rem;  
+}
+
+option {
+  font-size: 2rem;
+}
+
+input {
+  font-family: var(--principalFont);
+  font-size: 8rem;
+  width: 100%;
+  height: 10rem;
+}
+
+.form {
+  margin-bottom: 4rem;
+}
+
+.time {
+  margin-left: 3rem;
+}
+
+.checkbox {
+  height: 6rem;
+  width: 10rem;
+}
+
+.court {
+  margin: 0 4rem 0 5rem; 
+}
+
+.court_select {
+  width: 10rem;
+}
+
+button {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-family: var(--principalFont);
+  font-size: 8rem;
+  width: 65%;
+  height: 12rem;
+  border-radius: 2rem;
+  background-color: var(--green);
+}
+
+button:hover {
+  background-color: var(--darkGreen);
+  color: var(--white);
+}
+
+/* Horarios */
+
+.reserved {
+  border: 3px solid var(--white);
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 0;
+}
+
+.name, .tel, .fixed, .courtNumber {
+  font-size: 5rem;
+}
+
+.fixed {
+  display: inline;
+}
+
+/* Boton fijos */
+
+.fixedForm {
+  display: inline;
+}
+
+.fixedButton {
+  width: 5em;
+  height: 6rem;
+  font-size: 4rem;
+  background-color: var(--white);
+}
