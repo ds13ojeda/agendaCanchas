@@ -15,7 +15,7 @@ const fridayController = {
     addFriday: (req,res) => {
         let reservedTime = req.body.time
         let courtNumber = req.body.court
-        let timeToReserve = wednesdayFree.filter(i => i.time == reservedTime && i.court == courtNumber)
+        let timeToReserve = fridayFree.filter(i => i.time == reservedTime && i.court == courtNumber)
         console.log(timeToReserve)
         if (timeToReserve.length == 1){
             timeToReserve[0].reserved = 1
