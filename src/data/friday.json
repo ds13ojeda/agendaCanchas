@@ -5,10 +5,10 @@
   "court": 1,
   "price": 1000,
   "day": "friday",
-  "reserved": 0,
-  "name": "",
-  "tel": "",
-  "fixed": 0
+  "reserved": 1,
+  "name": "Diego",
+  "tel": "1121767615",
+  "fixed": 1
  },
  {
   "id": 2,
